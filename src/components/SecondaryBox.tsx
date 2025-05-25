@@ -8,7 +8,7 @@ import About from "./about";
 export default function SecondaryBox() {
   const theme = useTheme();
   const [tabType, setTableType] = useState<
-    "about" | "education" | "experiences"
+    "about" | "education" | "experiences" | "skills" | "projects"
   >("about");
 
   return (
@@ -17,7 +17,7 @@ export default function SecondaryBox() {
         display: "flex",
         flexDirection: "column",
         gap: 3,
-        width: "50%",
+        width: "55%",
         padding: "1rem",
         border: `2px solid ${theme.palette.action.hover}`,
         boxShadow: 3,
