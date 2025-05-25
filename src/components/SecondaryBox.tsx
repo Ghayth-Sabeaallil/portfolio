@@ -5,11 +5,11 @@ import { useState } from "react";
 import Education from "./Education";
 import Experiences from "./Experiences";
 import About from "./about";
+import type { TabType } from "../lib/types";
+
 export default function SecondaryBox() {
   const theme = useTheme();
-  const [tabType, setTableType] = useState<
-    "about" | "education" | "experiences" | "skills" | "projects"
-  >("about");
+  const [tabType, setTableType] = useState<TabType>("about");
 
   return (
     <Box

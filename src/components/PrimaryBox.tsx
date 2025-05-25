@@ -64,6 +64,7 @@ export default function PrimaryBox() {
           </Typography>
         </Box>
       </Box>
+
       {data.map((item, index) => (
         <ContactInfo
           key={index}

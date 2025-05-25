@@ -1,29 +1,20 @@
 import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import InfoIcon from "@mui/icons-material/Info";
-import SchoolIcon from "@mui/icons-material/School";
-import WorkIcon from "@mui/icons-material/Work";
-import SquareFootIcon from "@mui/icons-material/SquareFoot";
-import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import { useTheme } from "@mui/material/styles";
 import { Box } from "@mui/material";
+import { tabs } from "../lib/data";
+import type { TabType } from "../lib/types";
 
 type HeaderTabsProps = {
-  tabType: "about" | "education" | "experiences" | "skills" | "projects";
-  onTabChange: (
-    tabType: "about" | "education" | "experiences" | "skills" | "projects"
-  ) => void;
+  tabType: TabType;
+  onTabChange: (tabType: TabType) => void;
 };
 export default function HeaderTabs({ tabType, onTabChange }: HeaderTabsProps) {
   const handleChange = (_: React.SyntheticEvent, newValue: string) => {
-    onTabChange(
-      newValue as "about" | "education" | "experiences" | "skills" | "projects"
-    );
+    onTabChange(newValue as TabType);
   };
   const theme = useTheme();
-
-  const tabs = ["about", "education", "experiences", "skills", "projects"];
 
   return (
     <Box
@@ -42,31 +33,19 @@ export default function HeaderTabs({ tabType, onTabChange }: HeaderTabsProps) {
         onChange={handleChange}
         aria-label="icon label tabs example"
       >
-        {tabs.map((tab) => {
+        {tabs.map((tab, index) => {
           return (
             <Tab
-              key={tab}
+              key={index}
               sx={{
                 marginRight: 2,
                 "&.Mui-selected": {
                   color: theme.palette.action.hover,
                 },
               }}
-              value={tab}
-              label={tab}
-              icon={
-                tab === "about" ? (
-                  <InfoIcon fontSize="medium" />
-                ) : tab === "education" ? (
-                  <SchoolIcon fontSize="medium" />
-                ) : tab === "experiences" ? (
-                  <WorkIcon fontSize="medium" />
-                ) : tab === "skills" ? (
-                  <SquareFootIcon fontSize="medium" />
-                ) : (
-                  <AccountTreeIcon fontSize="medium" />
-                )
-              }
+              value={tab.label}
+              label={tab.label}
+              icon={<tab.icon color="secondary" />}
             />
           );
         })}

@@ -8,7 +8,7 @@ export default function Avarat() {
       sx={{
         boxShadow: 3,
         borderRadius: theme.shape.borderRadius,
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.secondary.main,
         border: `2px outset ${theme.palette.primary.contrastText}`,
         width: "auto",
         maxWidth: 200,
