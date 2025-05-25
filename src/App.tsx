@@ -1,4 +1,4 @@
-import Contact from "./components/Contact";
+import PrimaryBox from "./components/PrimaryBox";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme/muiTheme";
 import {
@@ -24,7 +24,7 @@ function AppWithTheme() {
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
-      <Contact />
+      <PrimaryBox />
     </ThemeProvider>
   );
 }

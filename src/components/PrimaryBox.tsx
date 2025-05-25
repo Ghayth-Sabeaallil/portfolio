@@ -2,13 +2,12 @@ import { Box, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import { data } from "../lib/data";
-import Rows from "./Rows";
+import ContactInfo from "./ContactInfo";
 import { SwitchMode } from "./SwitchMode";
 import Avarat from "./Avatar";
 import { SocialMedia } from "./SocialMedia";
-export default function Contact() {
+export default function PrimaryBox() {
   const theme = useTheme();
-
   return (
     <Box
       sx={{
@@ -66,7 +65,7 @@ export default function Contact() {
         </Box>
       </Box>
       {data.map((item, index) => (
-        <Rows
+        <ContactInfo
           key={index}
           title={item.title}
           info={item.data}

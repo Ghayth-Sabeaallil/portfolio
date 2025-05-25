@@ -7,7 +7,7 @@ type RowProps = {
   icon: SvgIconComponent;
 };
 
-export default function Rows({ title, info, icon: Icon }: RowProps) {
+export default function ContactInfo({ title, info, icon: Icon }: RowProps) {
   const theme = useTheme();
   return (
     <Box
