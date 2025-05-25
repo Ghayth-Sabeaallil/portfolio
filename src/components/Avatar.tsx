@@ -18,7 +18,7 @@ export default function Avarat() {
     >
       <img
         src={avatar}
-        style={{ width: "85%", height: "auto", display: "block" }}
+        style={{ width: "75%", height: "auto", display: "block" }}
         alt="Avatar"
       />
     </Box>

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import { data } from "../lib/data";
@@ -16,7 +16,8 @@ export default function Contact() {
         flexDirection: "column",
         width: "fit-content",
         gap: 3,
-        padding: "2rem 1.5rem",
+        padding: "1rem",
+        border: `2px solid ${theme.palette.action.hover}`,
         boxShadow: 3,
         backgroundColor: theme.palette.primary.light,
         borderRadius: theme.shape.borderRadius,
@@ -32,6 +33,37 @@ export default function Contact() {
       >
         <SwitchMode />
         <Avarat />
+        <Typography
+          variant="h5"
+          sx={{
+            color: theme.palette.text.primary,
+            fontFamily: "Roboto, sans-serif",
+            fontWeight: 600,
+          }}
+        >
+          GHAYTH SABEAALLIL
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            backgroundColor: theme.palette.secondary.main,
+            padding: 1,
+            borderRadius: theme.shape.borderRadius,
+          }}
+        >
+          <Typography
+            variant="body2"
+            sx={{
+              color: theme.palette.text.primary,
+              userSelect: "none",
+              fontWeight: 300,
+            }}
+          >
+            FRONTEND DEVELOPER
+          </Typography>
+        </Box>
       </Box>
       {data.map((item, index) => (
         <Rows
