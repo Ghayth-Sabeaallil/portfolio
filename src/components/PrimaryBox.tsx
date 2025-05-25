@@ -60,7 +60,7 @@ export default function PrimaryBox() {
               fontWeight: 300,
             }}
           >
-            FRONTEND DEVELOPER
+            FRONTEND DEVELOPER - REACT
           </Typography>
         </Box>
       </Box>

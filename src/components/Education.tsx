@@ -7,18 +7,20 @@ export default function Education() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: "left",
+        border: `2px outset ${theme.palette.primary.contrastText}`,
+
         backgroundColor: theme.palette.secondary.main,
-        padding: 1,
+        gap: 5,
+        padding: 2,
         borderRadius: theme.shape.borderRadius,
       }}
     >
       <Typography
-        variant="body2"
+        variant="h5"
         sx={{
-          color: theme.palette.text.primary,
-          userSelect: "none",
-          fontWeight: 300,
+          color: theme.palette.text.secondary,
+          fontWeight: 500,
         }}
       >
         Education
