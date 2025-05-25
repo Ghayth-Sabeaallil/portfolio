@@ -16,7 +16,7 @@ export default function Contact() {
         flexDirection: "column",
         width: "fit-content",
         gap: 3,
-        padding: "3rem 2rem",
+        padding: "2rem 1.5rem",
         boxShadow: 3,
         backgroundColor: theme.palette.primary.light,
         borderRadius: theme.shape.borderRadius,
