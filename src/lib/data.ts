@@ -26,3 +26,20 @@ export const tabs = [{ label: "about", icon: InfoIcon },
 export const cards = [{ title: "Web Design", description: "Cutting-edge, high-quality design.", icon: ArchitectureIcon },
 { title: "Web Development", description: "High-quality web development.", icon: WebIcon }, { title: "Mobile Apps", description: "Professional, high-quality app development.", icon: PhoneAndroidIcon },
 ]
+
+export const education = [
+    { name: "Borås Yrkehögskola", description: "FrontEnd Developer - React", date: "2023 - 2025", img: "yhs" },
+    { name: "Linneuniversitetet Växjö", description: "Network Security (Java1 and Java2).", date: "2019 - 2020", img: "linn" },
+    { name: "Axevalla Fölkhögskola", description: "Linux, Servering, C++ and Networking.", date: "2018 - 2019", img: "axv" },
+    { name: "Campus Lidköping", description: "Swedish 3, English 6 and Math 3C.", date: "2017 - 2018", img: "campus" },
+    {
+        name: "High School", description: "Completed high school education in Mersin, Turkey, with a focus on academic development and personal growth.", date: "2013 - 2015"
+    },
+    { name: "Elementary School", description: "Completed elementary education in Latakia, Syria, developing a strong foundation in reading, writing, and mathematics.", date: "2004 - 2012" },
+]
+
+export const experiences = [
+    { name: "Ekelund Styr AB", description: "FrontEnd Developer React, Borås (.env, nextJS, TS, JS, Tailwind, React, Azure, Figma)", date: "Jan 2025 - Maj 2025", img: "eke" },
+    { name: "Luday AB", description: "Fullstack Developer Online (.env, nextJS, TS, JS, Tailwind, React).", date: "Aug 2024 - Des 2024", img: "luday" },
+    { name: "Arla Foods", description: "Maskinoperatör - Ostförpackning. Sverige - Götene.", date: "2020 - Now", img: "arla" },
+]

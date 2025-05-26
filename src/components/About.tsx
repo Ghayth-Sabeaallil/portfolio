@@ -11,9 +11,8 @@ export default function About() {
         flexDirection: "column",
         alignItems: "left",
         border: `2px outset ${theme.palette.primary.contrastText}`,
-
         backgroundColor: theme.palette.secondary.main,
-        gap: 5,
+        gap: 3,
         padding: 2,
         borderRadius: theme.shape.borderRadius,
       }}

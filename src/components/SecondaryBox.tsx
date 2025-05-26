@@ -4,8 +4,8 @@ import { Box } from "@mui/material";
 import { useState } from "react";
 import Education from "./Education";
 import Experiences from "./Experiences";
-import About from "./about";
 import type { TabType } from "../lib/types";
+import About from "./About";
 
 export default function SecondaryBox() {
   const theme = useTheme();

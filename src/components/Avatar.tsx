@@ -1,5 +1,5 @@
 import { Box, useTheme } from "@mui/material";
-import avatar from "../assets/avatar.png"; // Adjust the path as necessary
+import avatar from "/assets/avatar.png"; // Adjust the path as necessary
 
 export default function Avarat() {
   const theme = useTheme();

@@ -1,5 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
-
+import TimeLine from "./TimeLine";
+import { education } from "../lib/data";
 export default function Education() {
   const theme = useTheme();
   return (
@@ -25,6 +26,7 @@ export default function Education() {
       >
         Education
       </Typography>
+      <TimeLine data={education} />
     </Box>
   );
 }
