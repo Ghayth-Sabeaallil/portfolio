@@ -1,4 +1,4 @@
-import { Box, keyframes, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 type TimeLineProps = {
   data: {
     name: string;
@@ -17,8 +17,8 @@ export default function TimeLine({ data }: TimeLineProps) {
         flexDirection: "column",
         borderLeft: 4,
         borderColor: theme.palette.primary.light,
-        marginLeft: "50px",
-        gap: 4,
+        marginLeft: 2,
+        gap: 3,
       }}
     >
       {data.map((item, index) => (

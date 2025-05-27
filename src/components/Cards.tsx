@@ -19,6 +19,7 @@ export default function Cards({ title, description, icon: Icon }: CardsProps) {
         padding: 2,
         display: "flex",
         maxWidth: 300,
+        minWidth: 200,
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",

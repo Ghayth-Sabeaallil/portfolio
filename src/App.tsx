@@ -28,10 +28,12 @@ function AppWithTheme() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", sm: "column", md: "row", lg: "row" },
           justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
           gap: 2,
-          width: "100%",
+          padding: 2,
         }}
       >
         <PrimaryBox />

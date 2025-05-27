@@ -1,8 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import TimeLine from "./TimeLine";
-import { experiences } from "../lib/data";
 
-export default function Experiences() {
+export default function Skills() {
   const theme = useTheme();
   return (
     <Box
@@ -26,9 +24,8 @@ export default function Experiences() {
           fontWeight: 500,
         }}
       >
-        Experiences
+        Skills
       </Typography>
-      <TimeLine data={experiences} />
     </Box>
   );
 }

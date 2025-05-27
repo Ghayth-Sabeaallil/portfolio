@@ -10,45 +10,41 @@ type HeaderTabsProps = {
   tabType: TabType;
   onTabChange: (tabType: TabType) => void;
 };
+
 export default function HeaderTabs({ tabType, onTabChange }: HeaderTabsProps) {
   const handleChange = (_: React.SyntheticEvent, newValue: string) => {
     onTabChange(newValue as TabType);
   };
+
   const theme = useTheme();
 
   return (
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "center",
         width: "100%",
-        justifyItems: "center",
-        justifySelf: "center",
-        alignContent: "center",
-        alignItems: "center",
       }}
     >
       <Tabs
         value={tabType}
         onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="auto"
         aria-label="icon label tabs example"
       >
-        {tabs.map((tab, index) => {
-          return (
-            <Tab
-              key={index}
-              sx={{
-                marginRight: 2,
-                "&.Mui-selected": {
-                  color: theme.palette.action.hover,
-                },
-              }}
-              value={tab.label}
-              label={tab.label}
-              icon={<tab.icon color="secondary" />}
-            />
-          );
-        })}
+        {tabs.map((tab, index) => (
+          <Tab
+            key={index}
+            sx={{
+              marginRight: 2,
+              "&.Mui-selected": {
+                color: theme.palette.action.hover,
+              },
+            }}
+            value={tab.label}
+            label={tab.label}
+            icon={<tab.icon color="secondary" />}
+          />
+        ))}
       </Tabs>
     </Box>
   );

@@ -15,6 +15,8 @@ export default function About() {
         gap: 3,
         padding: 2,
         borderRadius: theme.shape.borderRadius,
+        overscrollBehavior: "auto",
+        overflowY: "auto",
       }}
     >
       <Typography

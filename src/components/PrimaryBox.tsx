@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import { data } from "../lib/data";
@@ -6,20 +6,63 @@ import ContactInfo from "./ContactInfo";
 import { SwitchMode } from "./SwitchMode";
 import Avarat from "./Avatar";
 import { SocialMedia } from "./SocialMedia";
+import { useEffect, useRef, useState } from "react";
 export default function PrimaryBox() {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [expanded, setExpanded] = useState(false);
+  const [contentHeight, setContentHeight] = useState("auto");
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    if (isMobile) {
+      setExpanded((prev) => !prev);
+    }
+  };
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight + "px");
+    }
+  }, []);
   return (
     <Box
+      ref={contentRef}
+      onClick={handleClick}
       sx={{
         display: "flex",
         flexDirection: "column",
-        width: "fit-content",
+        width: {
+          xs: "100%",
+          sm: "100%",
+          md: "fit-content",
+          lg: "fit-content",
+        },
         gap: 3,
         padding: "1rem",
         border: `2px solid ${theme.palette.action.hover}`,
         boxShadow: 3,
         backgroundColor: theme.palette.primary.light,
         borderRadius: theme.shape.borderRadius,
+        overflow: "hidden",
+        maxHeight: {
+          xs: expanded ? contentHeight : "26rem",
+          sm: expanded ? contentHeight : "26rem",
+          md: "100%",
+          lg: "100%",
+        },
+        transition: "max-height 0.5s ease, opacity 0.3s ease",
+        opacity: {
+          xs: expanded ? 1 : 0.95,
+          sm: expanded ? 1 : 0.95,
+          md: expanded ? 1 : 0.95,
+          lg: 1,
+        },
+        cursor: {
+          xs: "pointer",
+          sm: "pointer",
+          md: "default",
+          lg: "default",
+        },
       }}
     >
       <Box
@@ -64,7 +107,6 @@ export default function PrimaryBox() {
           </Typography>
         </Box>
       </Box>
-
       {data.map((item, index) => (
         <ContactInfo
           key={index}
