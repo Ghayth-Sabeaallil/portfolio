@@ -18,7 +18,12 @@ export default function Avarat() {
     >
       <img
         src={avatar}
-        style={{ width: "75%", height: "auto", display: "block" }}
+        style={{
+          width: "75%",
+          height: "auto",
+          display: "block",
+          filter: `drop-shadow(0 0 10px ${theme.palette.primary.main})`,
+        }}
         alt="Avatar"
       />
     </Box>
