@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { keyframes, useTheme } from "@mui/material/styles";
 
 import { data } from "../lib/data";
 import ContactInfo from "./ContactInfo";
@@ -7,12 +7,26 @@ import { SwitchMode } from "./SwitchMode";
 import Avarat from "./Avatar";
 import { SocialMedia } from "./SocialMedia";
 import { useEffect, useRef, useState } from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+
 export default function PrimaryBox() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [expanded, setExpanded] = useState(false);
   const [contentHeight, setContentHeight] = useState("auto");
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const bounce = keyframes`
+   0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+`;
 
   const handleClick = () => {
     if (isMobile) {
@@ -45,8 +59,8 @@ export default function PrimaryBox() {
         borderRadius: theme.shape.borderRadius,
         overflow: "hidden",
         maxHeight: {
-          xs: expanded ? contentHeight : "26rem",
-          sm: expanded ? contentHeight : "26rem",
+          xs: expanded ? contentHeight : "28rem",
+          sm: expanded ? contentHeight : "28rem",
           md: "100%",
           lg: "100%",
         },
@@ -106,6 +120,25 @@ export default function PrimaryBox() {
             FRONTEND DEVELOPER - REACT
           </Typography>
         </Box>
+        {isMobile && !expanded ? (
+          <KeyboardArrowDownIcon
+            sx={{
+              animation: `${bounce} 1s cubic-bezier(0, 0, 0.2, 1) infinite`,
+            }}
+            fontSize="medium"
+            color="secondary"
+          />
+        ) : (
+          isMobile && (
+            <KeyboardArrowUpIcon
+              sx={{
+                animation: `${bounce} 1s cubic-bezier(0, 0, 0.2, 1) infinite`,
+              }}
+              fontSize="medium"
+              color="secondary"
+            />
+          )
+        )}
       </Box>
       {data.map((item, index) => (
         <ContactInfo
