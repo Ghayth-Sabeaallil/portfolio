@@ -39,7 +39,7 @@ export const education = [
 ]
 
 export const experiences = [
-    { name: "Ekelund Styr AB", description: "FrontEnd Developer React, Borås (.env, nextJS, TS, JS, Tailwind, React, Azure, Figma)", date: "Jan 2025 - Maj 2025", img: "eke" },
-    { name: "Luday AB", description: "Fullstack Developer Online (.env, nextJS, TS, JS, Tailwind, React).", date: "Aug 2024 - Des 2024", img: "luday" },
-    { name: "Arla Foods", description: "Maskinoperatör - Ostförpackning. Sverige - Götene.", date: "2020 - Now", img: "arla" },
+    { name: "Ekelund Styr AB (Internship) - Borås", description: "FrontEnd Developer React, Borås (.env, TS, Mui, React, Azure, DevOps)", date: "Jan 2025 - Maj 2025", img: "eke" },
+    { name: "Luday AB (Internship)- Online", description: "Fullstack Developer Online (.env, TS, Tailwind, React, Docker).", date: "Aug 2024 - Des 2024", img: "luday" },
+    { name: "Arla Foods - Götene", description: "Maskinoperatör - Ostförpackning.", date: "2020 - Now", img: "arla" },
 ]

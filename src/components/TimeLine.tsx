@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, keyframes, Typography, useTheme } from "@mui/material";
 type TimeLineProps = {
   data: {
     name: string;
@@ -9,7 +9,17 @@ type TimeLineProps = {
 };
 export default function TimeLine({ data }: TimeLineProps) {
   const theme = useTheme();
-
+  const ping = keyframes`
+ 0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
   return (
     <Box
       sx={{
@@ -32,6 +42,7 @@ export default function TimeLine({ data }: TimeLineProps) {
               borderRadius: "50%",
               width: item.img ? 35 : 15,
               height: item.img ? 35 : 15,
+              animation: `${ping} 2s cubic-bezier(0, 0, 0.2, 1) infinite`,
             }}
           >
             {item.img && (
