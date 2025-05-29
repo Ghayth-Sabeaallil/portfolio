@@ -22,7 +22,7 @@ export default function Avarat() {
           width: "75%",
           height: "auto",
           display: "block",
-          filter: `drop-shadow(0 0 10px ${theme.palette.primary.main})`,
+          filter: `drop-shadow(0 -4px 6px ${theme.palette.text.primary})`,
         }}
         alt="Avatar"
       />
