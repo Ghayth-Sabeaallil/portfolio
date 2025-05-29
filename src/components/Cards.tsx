@@ -1,5 +1,6 @@
 import type { SvgIconComponent } from "@mui/icons-material";
 import { Box, Typography, useTheme } from "@mui/material";
+import { show } from "../theme/animation";
 
 type CardsProps = {
   title: string;
@@ -16,6 +17,7 @@ export default function Cards({ title, description, icon: Icon }: CardsProps) {
         borderRadius: theme.shape.borderRadius,
         backgroundColor: theme.palette.primary.light,
         border: `2px outset ${theme.palette.primary.contrastText}`,
+        animation: `${show} 1s ease-in-out`,
         padding: 2,
         display: "flex",
         maxWidth: 300,

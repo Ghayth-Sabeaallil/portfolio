@@ -1,6 +1,7 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { cards } from "../lib/data"; // Adjust the import path as necessary
 import Cards from "./Cards";
+import { slideInFromDown, slideInFromUp } from "../theme/animation";
 
 export default function About() {
   const theme = useTheme();
@@ -33,6 +34,7 @@ export default function About() {
         sx={{
           color: theme.palette.text.primary,
           fontWeight: 500,
+          animation: `${slideInFromUp} 1s ease-in-out`,
         }}
       >
         I'm a Frontend Developer specializing in building responsive, scalable,
@@ -46,6 +48,7 @@ export default function About() {
         sx={{
           color: theme.palette.text.primary,
           fontWeight: 500,
+          animation: `${slideInFromDown} 1s ease-in-out`,
         }}
       >
         My focus is on creating seamless user experiences that not only look

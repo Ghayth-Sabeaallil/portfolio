@@ -43,3 +43,10 @@ export const experiences = [
     { name: "Luday AB (Internship)- Online", description: "Fullstack Developer Online (.env, TS, Tailwind, React, Docker).", date: "Aug 2024 - Des 2024", img: "luday" },
     { name: "Arla Foods - Götene", description: "Maskinoperatör - Ostförpackning.", date: "2020 - Now", img: "arla" },
 ]
+
+export const languages = ["html5", "javascript", "typescript", "java"]
+export const db = ["mysql", "mongodb"]
+export const style = ["css3", "sass", "tailwindcss"]
+export const tools = ["github", "figma", "git", "intellij", "vscode", "trello", "docker", "vim", "vitejs"]
+export const frameworks = ["nextjs", "react"]
+export const os = ["ubuntu", "windows11"]

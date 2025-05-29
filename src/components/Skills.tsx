@@ -1,4 +1,6 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
+import { languages, style, db, tools, frameworks, os } from "../lib/data";
+import SKillsIcon from "./SkillsIcons";
 
 export default function Skills() {
   const theme = useTheme();
@@ -17,15 +19,12 @@ export default function Skills() {
         borderRadius: theme.shape.borderRadius,
       }}
     >
-      <Typography
-        variant="h5"
-        sx={{
-          color: theme.palette.text.secondary,
-          fontWeight: 500,
-        }}
-      >
-        Skills
-      </Typography>
+      <SKillsIcon data={languages} name={"Languages"} />
+      <SKillsIcon data={style} name={"Style"} />
+      <SKillsIcon data={db} name={"Database"} />
+      <SKillsIcon data={tools} name={"Tools"} />
+      <SKillsIcon data={frameworks} name={"Framworks"} />
+      <SKillsIcon data={os} name={"Operating System"} />
     </Box>
   );
 }

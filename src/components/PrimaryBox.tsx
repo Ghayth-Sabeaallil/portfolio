@@ -1,6 +1,5 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
-import { keyframes, useTheme } from "@mui/material/styles";
-
+import { useTheme } from "@mui/material/styles";
 import { data } from "../lib/data";
 import ContactInfo from "./ContactInfo";
 import { SwitchMode } from "./SwitchMode";
@@ -9,6 +8,7 @@ import { SocialMedia } from "./SocialMedia";
 import { useEffect, useRef, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { bounce } from "../theme/animation";
 
 export default function PrimaryBox() {
   const theme = useTheme();
@@ -16,17 +16,6 @@ export default function PrimaryBox() {
   const [expanded, setExpanded] = useState(false);
   const [contentHeight, setContentHeight] = useState("auto");
   const contentRef = useRef<HTMLDivElement>(null);
-
-  const bounce = keyframes`
-   0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-`;
 
   const handleClick = () => {
     if (isMobile) {

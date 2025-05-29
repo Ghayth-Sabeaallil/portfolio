@@ -1,4 +1,5 @@
-import { Box, keyframes, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
+import { ping, fadeUp } from "../theme/animation";
 type TimeLineProps = {
   data: {
     name: string;
@@ -9,17 +10,7 @@ type TimeLineProps = {
 };
 export default function TimeLine({ data }: TimeLineProps) {
   const theme = useTheme();
-  const ping = keyframes`
- 0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
+
   return (
     <Box
       sx={{
@@ -29,6 +20,7 @@ export default function TimeLine({ data }: TimeLineProps) {
         borderColor: theme.palette.primary.light,
         marginLeft: 2,
         gap: 3,
+        animation: `${fadeUp} 1s ease-in-out`,
       }}
     >
       {data.map((item, index) => (
