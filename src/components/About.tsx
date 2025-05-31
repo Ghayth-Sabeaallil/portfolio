@@ -25,6 +25,7 @@ export default function About() {
         sx={{
           color: theme.palette.text.secondary,
           fontWeight: 500,
+          userSelect: "none",
         }}
       >
         About Me
@@ -63,6 +64,7 @@ export default function About() {
         sx={{
           color: theme.palette.text.secondary,
           fontWeight: 500,
+          userSelect: "none",
         }}
       >
         Doing

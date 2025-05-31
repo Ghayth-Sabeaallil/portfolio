@@ -1,4 +1,5 @@
 import { Box, Typography, useTheme } from "@mui/material";
+import { show } from "../theme/animation";
 
 type SkillsIconProps = {
   name: string;
@@ -7,19 +8,30 @@ type SkillsIconProps = {
 export default function SKillsIcon({ data, name }: SkillsIconProps) {
   const theme = useTheme();
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        animation: `${show} 1s ease-in-out`,
+        gap: 2,
+      }}
+    >
       <Typography
         variant="h5"
         sx={{
           color: theme.palette.text.secondary,
           fontWeight: 500,
+          userSelect: "none",
         }}
       >
         {name}
       </Typography>
-      <Box sx={{ display: "flex", flexDirection: "row", gap: 1 }}>
+
+      {/* Wrap-enabled icon container */}
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
         {data.map((lang, index) => (
           <Box
+            key={index}
             sx={{
               borderRadius: "50%",
               width: 70,
@@ -37,7 +49,6 @@ export default function SKillsIcon({ data, name }: SkillsIconProps) {
             }}
           >
             <img
-              key={index}
               alt={lang}
               style={{
                 width: "100%",

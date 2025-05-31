@@ -1,4 +1,6 @@
 import { Box, Typography, useTheme } from "@mui/material";
+import { projects } from "../lib/data";
+import ProjectsCard from "./ProjectsCard";
 
 export default function Projects() {
   const theme = useTheme();
@@ -26,6 +28,23 @@ export default function Projects() {
       >
         Projects
       </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 2,
+          justifyContent: "center",
+        }}
+      >
+        {projects.map((project, index) => (
+          <ProjectsCard
+            key={index}
+            title={project.title}
+            github={project.github}
+            demo={project.demo}
+          />
+        ))}
+      </Box>
     </Box>
   );
 }

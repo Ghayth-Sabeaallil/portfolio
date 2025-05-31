@@ -24,6 +24,7 @@ export default function Education() {
         sx={{
           color: theme.palette.text.secondary,
           fontWeight: 500,
+          userSelect: "none",
         }}
       >
         Education

@@ -24,6 +24,7 @@ export default function Experiences() {
         sx={{
           color: theme.palette.text.secondary,
           fontWeight: 500,
+          userSelect: "none",
         }}
       >
         Experiences

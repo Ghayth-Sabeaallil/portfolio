@@ -11,11 +11,13 @@ import WebIcon from '@mui/icons-material/Web';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import LanguageIcon from '@mui/icons-material/Language';
 
+//contact data
 export const data = [{ title: "EMAIL", data: "ghaessesa58@gmail.com", icon: EmailIcon },
 { title: "PHONE", data: "+46 720 464 311", icon: CallIcon },
 { title: "LANGUAGES", data: "English, Swedish, Arabic", icon: LanguageIcon },
 { title: "ADDRESS", data: "Linnégatan 3D, 533 30 Götene", icon: MapIcon }]
 
+//tabs
 export const tabs = [{ label: "about", icon: InfoIcon },
 { label: "education", icon: SchoolIcon },
 { label: "experiences", icon: WorkIcon },
@@ -23,10 +25,12 @@ export const tabs = [{ label: "about", icon: InfoIcon },
 { label: "projects", icon: AccountTreeIcon },
 ]
 
+//cards
 export const cards = [{ title: "Web Design", description: "Cutting-edge, high-quality design.", icon: ArchitectureIcon },
 { title: "Web Development", description: "High-quality web development.", icon: WebIcon }, { title: "Mobile Apps", description: "Professional, high-quality app development.", icon: PhoneAndroidIcon },
 ]
 
+//education
 export const education = [
     { name: "Borås Yrkehögskola", description: "FrontEnd Developer - React", date: "2023 - 2025", img: "yhs" },
     { name: "Linneuniversitetet Växjö", description: "Network Security (Java1 and Java2).", date: "2019 - 2020", img: "linn" },
@@ -38,15 +42,27 @@ export const education = [
     { name: "Elementary School", description: "Completed elementary education in Latakia, Syria, developing a strong foundation in reading, writing, and mathematics.", date: "2004 - 2012" },
 ]
 
+//experiences
 export const experiences = [
     { name: "Ekelund Styr AB (Internship) - Borås", description: "FrontEnd Developer React, Borås (.env, TS, Mui, React, Azure, DevOps)", date: "Jan 2025 - Maj 2025", img: "eke" },
     { name: "Luday AB (Internship)- Online", description: "Fullstack Developer Online (.env, TS, Tailwind, React, Docker).", date: "Aug 2024 - Des 2024", img: "luday" },
     { name: "Arla Foods - Götene", description: "Maskinoperatör - Ostförpackning.", date: "2020 - Now", img: "arla" },
 ]
 
+//skills
 export const languages = ["html5", "javascript", "typescript", "java"]
 export const db = ["mysql", "mongodb"]
 export const style = ["css3", "sass", "tailwindcss"]
 export const tools = ["github", "figma", "git", "intellij", "vscode", "trello", "docker", "vim", "vitejs"]
 export const frameworks = ["nextjs", "react"]
 export const os = ["ubuntu", "windows11"]
+
+//projects
+export const projects = [
+    { title: "Pizza Cal", github: "https://github.com/Ghayth-Sabeaallil/PizzaCal", demo: "https://nkx4hx-5173.csb.app/" },
+    { title: "Portfolio", github: "https://github.com/Ghayth-Sabeaallil/portfolio", demo: "https://ghayth-sabeaallil.github.io/sabeaallil/" },
+    { title: "Syria", github: "https://github.com/Ghayth-Sabeaallil/syria", demo: "https://3hvxky-5173.csb.app/" },
+    { title: "Tabo", github: "https://github.com/Ghayth-Sabeaallil/tabo", demo: "https://tabo963.com" },
+    { title: "Skills Bubbles", github: "https://github.com/Ghayth-Sabeaallil/skill-bubbles", demo: "https://zsv8w9-5173.csb.app/" },
+    { title: "Book Lib", github: "https://github.com/Ghayth-Sabeaallil/bokLib", demo: "https://5z98y6-5173.csb.app/" },
+]
