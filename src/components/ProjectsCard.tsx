@@ -53,11 +53,27 @@ export default function ProjectsCard({
           {title}
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
-          <IconButton component="a" href={github}>
-            <GitHubIcon fontSize="large" color="secondary" />
+          <IconButton
+            component="a"
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon
+              fontSize="large"
+              sx={{ color: theme.palette.action.hover }}
+            />
           </IconButton>
-          <IconButton component="a" href={demo}>
-            <RssFeedIcon fontSize="large" color="secondary" />
+          <IconButton
+            component="a"
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <RssFeedIcon
+              fontSize="large"
+              sx={{ color: theme.palette.action.hover }}
+            />
           </IconButton>
         </Box>
       </Box>
