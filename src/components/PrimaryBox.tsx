@@ -19,14 +19,14 @@ export default function PrimaryBox() {
 
   const handleClick = () => {
     if (isMobile) {
-      setExpanded((prev) => !prev);
+      setExpanded(!expanded);
     }
   };
   useEffect(() => {
     if (contentRef.current) {
       setContentHeight(contentRef.current.scrollHeight + "px");
     }
-  }, []);
+  }, [expanded]);
   return (
     <Box
       ref={contentRef}
@@ -54,12 +54,6 @@ export default function PrimaryBox() {
           lg: "100%",
         },
         transition: "max-height 0.5s ease, opacity 0.3s ease",
-        opacity: {
-          xs: expanded ? 1 : 0.95,
-          sm: expanded ? 1 : 0.95,
-          md: expanded ? 1 : 0.95,
-          lg: 1,
-        },
         cursor: {
           xs: "pointer",
           sm: "pointer",
