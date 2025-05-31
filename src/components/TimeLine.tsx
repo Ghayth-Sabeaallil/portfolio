@@ -39,7 +39,7 @@ export default function TimeLine({ data }: TimeLineProps) {
           >
             {item.img && (
               <img
-                src={`/assets/${item.img}.png`}
+                src={`assets/${item.img}.png`}
                 alt={item.img}
                 style={{
                   width: "100%",
