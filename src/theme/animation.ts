@@ -14,12 +14,15 @@ export const bounce = keyframes`
 export const ping = keyframes`
  0% {
     transform: scale(1);
+    opacity: 1;
   }
   50% {
     transform: scale(1.1);
+    opacity: 0.5;
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 `;
 

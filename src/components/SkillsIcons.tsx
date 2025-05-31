@@ -24,17 +24,15 @@ export default function SKillsIcon({ data, name }: SkillsIconProps) {
               borderRadius: "50%",
               width: 70,
               height: 70,
-              border: `2px solid ${theme.palette.primary.contrastText}`,
+              border: `3px solid ${theme.palette.primary.light}`,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               transition: "0.5s",
               padding: 2,
               "&:hover": {
-                backgroundColor: "white",
+                backgroundColor: theme.palette.action.hover,
                 transform: "scale(1.2)",
-                borderColor: (theme) =>
-                  theme.palette.background?.default || "transparent",
               },
             }}
           >

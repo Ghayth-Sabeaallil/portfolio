@@ -14,13 +14,13 @@ export const SwitchMode = () => {
 
   return (
     <Box display="flex" alignItems="center" gap={1}>
-      <LightModeIcon />
+      <LightModeIcon fontSize="medium" color="secondary" />
       <Switch
         checked={colorMode === "dark"}
         onClick={stopPropagationAndToggle}
         onChange={stopPropagationAndToggle}
       />
-      <DarkModeIcon />
+      <DarkModeIcon fontSize="medium" color="secondary" />
     </Box>
   );
 };
