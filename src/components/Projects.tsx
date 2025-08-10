@@ -42,6 +42,7 @@ export default function Projects() {
             title={project.title}
             github={project.github}
             demo={project.demo}
+            img={project.img}
           />
         ))}
       </Box>
