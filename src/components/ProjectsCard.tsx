@@ -1,4 +1,13 @@
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import {
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  IconButton,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { show } from "../theme/animation";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
@@ -6,53 +15,50 @@ import RssFeedIcon from "@mui/icons-material/RssFeed";
 type ProjectsCardProps = {
   title: string;
   github: string;
-  demo: string;
+  demo?: string;
+  img: string;
 };
 
 export default function ProjectsCard({
   title,
   github,
+  img,
   demo,
 }: ProjectsCardProps) {
   const theme = useTheme();
   return (
-    <Box
-      sx={{
-        boxShadow: 3,
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: theme.palette.primary.light,
-        border: `2px outset ${theme.palette.primary.contrastText}`,
-        animation: `${show} 1s ease-in-out`,
-        padding: 2,
-        display: "flex",
-        maxWidth: 300,
-        minWidth: 200,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 2,
-      }}
-    >
-      <Box
+    <>
+      <Card
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 1,
+          boxShadow: 3,
+          borderRadius: theme.shape.borderRadius,
+          backgroundColor: theme.palette.primary.light,
+          border: `2px outset ${theme.palette.primary.contrastText}`,
+          animation: `${show} 1s ease-in-out`,
+          width: 250,
         }}
       >
-        <Typography
-          variant="h6"
-          sx={{
-            color: theme.palette.text.primary,
-            fontWeight: 800,
-            userSelect: "none",
-          }}
-        >
-          {title}
-        </Typography>
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image={`assets/${img}.png`}
+            alt="green iguana"
+          />
+          <CardContent>
+            <Typography
+              variant="h5"
+              component="div"
+              sx={{
+                color: theme.palette.text.secondary,
+                userSelect: "none",
+              }}
+            >
+              {title}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
           <IconButton
             component="a"
             href={github}
@@ -64,19 +70,21 @@ export default function ProjectsCard({
               sx={{ color: theme.palette.action.hover }}
             />
           </IconButton>
-          <IconButton
-            component="a"
-            href={demo}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <RssFeedIcon
-              fontSize="large"
-              sx={{ color: theme.palette.action.hover }}
-            />
-          </IconButton>
-        </Box>
-      </Box>
-    </Box>
+          {demo && (
+            <IconButton
+              component="a"
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RssFeedIcon
+                fontSize="large"
+                sx={{ color: theme.palette.action.hover }}
+              />
+            </IconButton>
+          )}
+        </CardActions>
+      </Card>
+    </>
   );
 }
