@@ -59,10 +59,17 @@ export const os = ["ubuntu", "windows11"]
 
 //projects
 export const projects = [
-    { title: "Pizza Cal", github: "https://github.com/Ghayth-Sabeaallil/PizzaCal", demo: "https://nkx4hx-5173.csb.app/" },
-    { title: "Portfolio", github: "https://github.com/Ghayth-Sabeaallil/portfolio", demo: "https://ghayth-sabeaallil.github.io/sabeaallil/" },
-    { title: "Syria", github: "https://github.com/Ghayth-Sabeaallil/syria", demo: "https://3hvxky-5173.csb.app/" },
-    { title: "Tabo", github: "https://github.com/Ghayth-Sabeaallil/tabo", demo: "https://tabo963.com" },
-    { title: "Skills Bubbles", github: "https://github.com/Ghayth-Sabeaallil/skill-bubbles", demo: "https://zsv8w9-5173.csb.app/" },
-    { title: "Book Lib", github: "https://github.com/Ghayth-Sabeaallil/bokLib", demo: "https://5z98y6-5173.csb.app/" },
+    { title: "Portfolio", github: "https://github.com/Ghayth-Sabeaallil/portfolio", demo: "https://ghayth-sabeaallil.github.io/portfolio/", img: "portfolio" },
+    { title: "State", github: "https://github.com/Ghayth-Sabeaallil/state", img: "state" },
+
+    { title: "ShopSystem", github: "https://github.com/Ghayth-Sabeaallil/ShopSystem", demo: "https://ghayth-sabeaallil.github.io/ShopSystem/", img: "shopSystem" },
+    { title: "Tabo", github: "https://github.com/Ghayth-Sabeaallil/tabo", demo: "https://tabo963.com", img: "tabo" },
+    { title: "Skills Bubbles", github: "https://github.com/Ghayth-Sabeaallil/skill-bubbles", img: "skills" },
+    { title: "API Library", github: "https://github.com/Ghayth-Sabeaallil/bokLib", img: "library" },
+    { title: "Pizza", github: "https://github.com/Ghayth-Sabeaallil/PizzaCal", img: "pizza" },
+    { title: "Arla", github: "https://github.com/Ghayth-Sabeaallil/arla", img: "arla-agv" },
+    { title: "Product Preview", github: "https://github.com/Ghayth-Sabeaallil/Product-preview-card-component", demo: "https://ghayth-sabeaallil.github.io/Product-preview-card-component", img: "Product-preview-card-component" },
+    { title: "API Flags", github: "https://github.com/Ghayth-Sabeaallil/REST-Countries-API-with-color-theme-switchert", demo: "https://ghayth-sabeaallil.github.io/REST-Countries-API-with-color-theme-switcher", img: "REST-Countries-API-with-color-theme-switcher" },
+    { title: "Result Summary", github: "https://github.com/Ghayth-Sabeaallil/Results-summary-component", demo: "https://ghayth-sabeaallil.github.io/Results-summary-component", img: "Results-summary-component" },
+    { title: "QR Code", github: "https://github.com/Ghayth-Sabeaallil/QR-code-component", demo: "https://ghayth-sabeaallil.github.io/QR-code-component", img: "QR-code-component" },
 ]
