@@ -7,6 +7,7 @@ import {
 } from "./context/ThemeModeContext";
 import { useMemo } from "react";
 import SecondaryBox from "./components/SecondaryBox";
+import CounterBox from "./components/CounterBox";
 
 function App() {
   return (
@@ -25,6 +26,18 @@ function AppWithTheme() {
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "column", md: "row", lg: "row" },
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 2,
+          padding: 2,
+        }}
+      >
+        <CounterBox />
+      </Box>
       <Box
         sx={{
           display: "flex",
