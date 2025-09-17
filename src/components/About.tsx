@@ -38,7 +38,7 @@ export default function About() {
           animation: `${slideInFromUp} 1s ease-in-out`,
         }}
       >
-        I'm a Frontend Developer specializing in building responsive, scalable,
+        I'm a Fullstack Developer specializing in building responsive, scalable,
         and high-performance web applications using React, TypeScript, Tailwind
         CSS, MUI, Sass, and REST APIs. I’m passionate about turning modern
         design systems into clean, efficient code and crafting user interfaces
@@ -54,10 +54,10 @@ export default function About() {
       >
         My focus is on creating seamless user experiences that not only look
         great but also function flawlessly across devices. With a strong eye for
-        detail and a deep understanding of frontend architecture, I bring
-        clarity to complexity and deliver polished, production-ready products.
-        Whether it's a landing page or a full-scale web app, I code with
-        creativity and precision.
+        detail and a deep understanding of frontend and backend architecture, I
+        bring clarity to complexity and deliver polished, production-ready
+        products. Whether it's a landing page or a full-scale web app, I code
+        with creativity and precision.
       </Typography>
       <Typography
         variant="h5"

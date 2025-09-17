@@ -32,7 +32,7 @@ export const cards = [{ title: "Web Design", description: "Cutting-edge, high-qu
 
 //education
 export const education = [
-    { name: "Borås Yrkehögskola", description: "FrontEnd Developer - React", date: "2023 - 2025", img: "yhs" },
+    { name: "Borås Yrkehögskola", description: "Fullstack Developer - React", date: "2023 - 2025", img: "yhs" },
     { name: "Linneuniversitetet Växjö", description: "Network Security (Java1 and Java2).", date: "2019 - 2020", img: "linn" },
     { name: "Axevalla Fölkhögskola", description: "Linux, Servering, C++ and Networking.", date: "2018 - 2019", img: "axv" },
     { name: "Campus Lidköping", description: "Swedish 3, English 6 and Math 3C.", date: "2017 - 2018", img: "campus" },
