@@ -54,7 +54,7 @@ export default function CounterBox() {
             fontWeight: 600,
             fontSize: "2rem",
           }}
-          end={134}
+          end={136}
           duration={5}
         />
       </Box>
