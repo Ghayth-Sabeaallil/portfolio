@@ -100,7 +100,7 @@ export default function PrimaryBox() {
               fontWeight: 300,
             }}
           >
-            FRONTEND DEVELOPER - REACT
+            FullStack DEVELOPER - REACT
           </Typography>
         </Box>
         {isMobile && !expanded ? (
